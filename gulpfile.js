@@ -15,6 +15,13 @@ var buffer = require('vinyl-buffer');
 var babel = require('gulp-babel');
 
 
+gulp.task('fonts', function() {
+  return gulp.src('node_modules/font-awesome/fonts/*')
+    .pipe(gulp.dest('./app/styles/fonts'))
+});
+
+
+
 gulp.task('scripts', function(){
 	var b = browserify({
 		entries : './source/scripts/main.js',
@@ -67,12 +74,17 @@ gulp.task('default',['scripts','styles','pug','images'],function(){
 	
 	browserSync.init({
 		server : './app/',
-		browser: "chrome"
 	});		
 
 	gulp.watch('./source/scripts/*.js',['scripts'],browserSync.reload());
+	gulp.watch('./source/components/**/*.js',['scripts'],browserSync.reload());
+
 	gulp.watch('./source/styles/*.scss',['styles'],browserSync.reload());
+	gulp.watch('./source/components/**/*.scss',['styles'],browserSync.reload());
+
 	gulp.watch('./source/pages/*.pug',['pug'],browserSync.reload());
+	gulp.watch('./source/components/**/*.pug',['pug'],browserSync.reload());
+
 	gulp.watch('./source/assets/**/*.*',['images'],browserSync.reload());
 
 });
