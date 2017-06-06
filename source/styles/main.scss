@@ -1,3 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:400,700|Arvo:400,700');
+@import url('font.css');
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
-@import '../components/spotlight/spotlight';
+@import '../components/spotlight/_style.scss';
+html,
+body,
+#page-wrap {
+    max-width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+
+

@@ -1,0 +1,41 @@
+- var contentMenu = [{icon: 'fa fa-hand-paper-o',title:'What we do',subtitle:'Immense Talented People'},{icon:'fa fa-magic',title:'Why us',subtitle:'The Dedicated Slots'},{icon: 'fa fa-puzzle-piece',title:'Team we have',subtitle:'The drinkers & smokers'},{icon: 'fa fa-map',title:'Hey we are here',subtitle:'Tons of way to reach us'}]
+
+
+section.spotlight
+	link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+	.wrapper(data-ibg-bg="assets/bg.jpg")
+		.menu
+			.btn.btn-danger
+				i(class='fa fa-2x fa-bars')
+				ul.list
+					each item in contentMenu
+						li
+							i(class= item.icon)
+							span= item.title
+							small= item.subtitle
+		.content
+			.caption
+				.caption_info
+					h1 Transforming#[br]Your#[br]Dreams
+				.caption_info2
+					p Into Digital Reality
+			.events
+				.event_date
+					p 14 April
+				.event_info
+					p Conference Billiard Bones Session. NYC USA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, deserunt.
+					a(href="#")
+						span Read Article &nbsp;
+						i(class =  'fa fa-external-link')
+				.event_links
+				h1 Stalk Us On&nbsp;
+				a(href="facebook.com")
+					i(class = 'fa fa-3x fa-facebook' )
+				a(href="facebook.com")
+					i(class = 'fa fa-3x fa-google-plus' )
+				a(href="facebook.com")
+					i(class = 'fa fa-3x fa-codepen' )
+				a(href="facebook.com")
+					i(class = 'fa fa-3x fa-instagram' )
+				.mouse
+					.ball
