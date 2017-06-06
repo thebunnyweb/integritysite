@@ -1,5 +1,8 @@
-- var contentMenu = [{icon: 'fa fa-hand-paper-o',title:'What we do',subtitle:'Immense Talented People'},{icon:'fa fa-magic',title:'Why us',subtitle:'The Dedicated Slots'},{icon: 'fa fa-puzzle-piece',title:'Team we have',subtitle:'The drinkers & smokers'},{icon: 'fa fa-map',title:'Hey we are here',subtitle:'Tons of way to reach us'}]
+- var contentMenu = [{icon: 'fa fa-hand-paper-o',title:'What we do',subtitle:'The Dedicated Slots'},{icon:'fa fa-magic',title:'Why us',subtitle:'We create Magic'},{icon: 'fa fa-puzzle-piece',title:'Team we have',subtitle:'Immense Talented People'},{icon: 'fa fa-map',title:'Beer / Coffee',subtitle:'Tons of way to reach us'}]
 
+- var eventContent = [{date:'14 April', info: 'Conference Billiard Bones Session. NYC USA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, deserunt.', link:'#'}]
+
+-var slick = {dots:false,nextArrow:'<i class= "fa fa-2x fa-chevron-right">',prevArrow:'<i class= "fa fa-2x fa-chevron-left">',};
 
 section.spotlight
 	link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
@@ -18,24 +21,46 @@ section.spotlight
 				.caption_info
 					h1 Transforming#[br]Your#[br]Dreams
 				.caption_info2
-					p Into Digital Reality
+					p Into Digital Real
+						span it
+						|y
+					small Quickly get in touch
+				.caption_links
+					.service_gal(data-slick= slick)
+						.one
+							h2
+								span Products &nbsp;#[br]
+								a.btn.btn-danger(href='#') Contact &nbsp;
+									i(class='fa fa-archive')
+						.two
+							h2
+								span Services &nbsp;#[br]
+								a.btn.btn-danger(href='#') Contact &nbsp;
+									i(class='fa fa-magic')
+						.three
+							h2
+								span Trainings &nbsp;#[br]
+								a.btn.btn-danger(href='#') Contact &nbsp;
+									i(class='fa fa-line-chart')
 			.events
 				.event_date
-					p 14 April
+					p= eventContent[0].date
 				.event_info
-					p Conference Billiard Bones Session. NYC USA Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, deserunt.
-					a(href="#")
+					p= eventContent[0].info
+					a(href= eventContent[0].link)
 						span Read Article &nbsp;
 						i(class =  'fa fa-external-link')
 				.event_links
 				h1 Stalk Us On&nbsp;
 				a(href="facebook.com")
-					i(class = 'fa fa-3x fa-facebook' )
+					i(class = 'fa fa-2x fa-facebook' )
 				a(href="facebook.com")
-					i(class = 'fa fa-3x fa-google-plus' )
+					i(class = 'fa fa-2x fa-google-plus' )
 				a(href="facebook.com")
-					i(class = 'fa fa-3x fa-codepen' )
+					i(class = 'fa fa-2x fa-codepen' )
 				a(href="facebook.com")
-					i(class = 'fa fa-3x fa-instagram' )
+					i(class = 'fa fa-2x fa-instagram' )
+				a(href="gmail.com")
+					i(class = 'fa fa-2x fa-envelope' )
 				.mouse
 					.ball

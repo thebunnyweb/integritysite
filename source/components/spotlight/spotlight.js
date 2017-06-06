@@ -138,13 +138,13 @@ module.exports = function() {
     }(window.jQuery);
 
     $(".spotlight .wrapper").interactive_bg({
-        strength: 35,
+        strength: 45,
         scale: 1.05,
         animationSpeed: "200ms",
         contain: true,
         wrapContent: false
     });
 
-
+$('.service_gal').slick();
  
 }

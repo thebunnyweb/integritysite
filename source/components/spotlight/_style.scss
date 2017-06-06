@@ -2,11 +2,19 @@ $lato: 'Lato',
 sans-serif;
 $mari: 'Merriweather',
 serif;
+$container_maxwidth: 1200px;
+$flatred: #e74c3c;
+$softgrey: #dedbdb;
+$dullwhite: #f9f9f9;
+$white: #fff;
+$carbon: #333;
+/**/
+
 section.spotlight {
     height: 100%;
     font-family: $mari;
     .wrapper {
-        max-width: 1200px;
+        max-width: $container_maxwidth;
         width: 100%;
         height: 100%;
         margin: 0 auto;
@@ -30,6 +38,14 @@ section.spotlight {
             }
             p {
                 font-size: 3em;
+                margin-bottom:5px;
+                span{
+                    color:$flatred;
+                    font-weight:700;
+                }
+            }
+            small{
+             font-size: 1em;  
             }
         }
     }
@@ -40,7 +56,7 @@ section.spotlight {
         .btn {
             width: auto;
             height: 40px;
-            background: #e74c3c;
+            background: $flatred;
             border: 0;
             position: relative;
             border-bottom-left-radius: 0;
@@ -53,14 +69,14 @@ section.spotlight {
                 position: absolute;
                 padding: 0;
                 list-style-type: none;
-                background: #f9f9f9;
+                background: $dullwhite;
                 left: 0;
                 top: 100%;
                 li {
                     padding: 15px;
                     font-size: 2em;
-                    color: #333333;
-                    border-bottom: 1px solid #dedbdb;
+                    color: $carbon;;
+                    border-bottom: 1px solid $softgrey;
                     border-radius: 5px;
                     border-top-left-radius: 0px;
                     transition: all .3s ease;
@@ -71,15 +87,15 @@ section.spotlight {
                 li small {
                     display: block;
                     font-size: 10px;
-                    color: #e74c3c;
+                    color: $flatred;
                 }
                 li:hover {
-                    background: #e74c3c;
-                    color: #fff;
+                    background: $flatred;
+                    color: $white;
                     box-shadow: inset 0 0 5px rgba(0, 0, 0, .3);
                 }
                 li:hover small {
-                    color: #fff;
+                    color: $white;
                 }
             }
         }
@@ -89,24 +105,24 @@ section.spotlight {
         width: 100%;
         position: relative;
         .event_date {
-            background-color: #e74c3c;
+            background-color: $flatred;
             padding: 20px;
             text-align: center;
-            color: #fff;
+            color: $white;
             font-size: 3em;
         }
         .event_info {
-            background-color: #f9f9f9;
+            background-color: $dullwhite;
             padding: 10px;
             overflow: hidden;
             transition: all .3s ease;
         }
         .event_links {
             padding: 5px;
-            background-color: #f9f9f9;
+            background-color: $dullwhite;
             a {
                 font-family: $lato;
-                color: #e74c3c;
+                color: $flatred;
             }
             p.trigger {
                 text-align: center;
@@ -116,10 +132,16 @@ section.spotlight {
             margin-right: 20px;
         }
         a:nth-of-type(2) {
-            color: #e74c3c;
+            color: $flatred;
         }
         a:nth-of-type(3) {
-            color: #333;
+            color: $carbon;
+        }
+        a:nth-of-type(4) {
+            color: #ffc838;
+        }
+        a:nth-of-type(5) {
+            color: #6dc993;
         }
         .mouse {
             width: 19px;
@@ -141,6 +163,16 @@ section.spotlight {
                 margin-right: auto;
                 animation: ball 1s linear infinite alternate;
             }
+        }
+    }
+
+
+    .service_gal{
+        position: absolute;
+        max-width:340px;
+        width: 100%;
+        a{
+        background: $flatred;
         }
     }
 }
