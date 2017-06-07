@@ -13,11 +13,22 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var babel = require('gulp-babel');
+var deploy = require('gulp-deploy-git');
 
 
 gulp.task('fonts', function() {
   return gulp.src('node_modules/font-awesome/fonts/*')
     .pipe(gulp.dest('./app/styles/fonts'))
+});
+
+
+gulp.task('deploy', function() {
+  return gulp.src('app/**/*', { read: false })
+    .pipe(deploy({
+      repository: 'https://github.com/thebunnyweb/integrityfiles.git',
+      verbose: true,
+      debug: true
+    }));
 });
 
 
