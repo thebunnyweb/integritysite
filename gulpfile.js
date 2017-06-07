@@ -21,6 +21,13 @@ gulp.task('fonts', function() {
 });
 
 
+gulp.task('serveprod', function() {
+  connect.server({
+    root: './app',
+    port: process.env.PORT || 5000
+  });
+});
+
 
 gulp.task('scripts', function(){
 	var b = browserify({
