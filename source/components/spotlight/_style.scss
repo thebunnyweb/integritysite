@@ -8,6 +8,7 @@ $softgrey: #dedbdb;
 $dullwhite: #f9f9f9;
 $white: #fff;
 $carbon: #333;
+
 /**/
 
 section.spotlight {
@@ -20,15 +21,20 @@ section.spotlight {
         margin: 0 auto;
         position: relative;
     }
-    .content {
+    .ibg-bg {
         position: absolute;
-        bottom: 5%;
+    }
+    .content {
         display: flex;
         flex-grow: 0;
         justify-content: space-between;
         width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-30%);
     }
     .caption {
+        z-index: 99;
         .caption_info,
         .caption_info2 {
             h1 {
@@ -38,14 +44,14 @@ section.spotlight {
             }
             p {
                 font-size: 3em;
-                margin-bottom:5px;
-                span{
-                    color:$flatred;
-                    font-weight:700;
+                margin-bottom: 5px;
+                span {
+                    color: $flatred;
+                    font-weight: 700;
                 }
             }
-            small{
-             font-size: 1em;  
+            small {
+                font-size: 1em;
             }
         }
     }
@@ -75,7 +81,8 @@ section.spotlight {
                 li {
                     padding: 15px;
                     font-size: 2em;
-                    color: $carbon;;
+                    color: $carbon;
+                    ;
                     border-bottom: 1px solid $softgrey;
                     border-radius: 5px;
                     border-top-left-radius: 0px;
@@ -165,14 +172,12 @@ section.spotlight {
             }
         }
     }
-
-
-    .service_gal{
+    .service_gal {
         position: absolute;
-        max-width:340px;
+        max-width: 340px;
         width: 100%;
-        a{
-        background: $flatred;
+        a {
+            background: $flatred;
         }
     }
 }

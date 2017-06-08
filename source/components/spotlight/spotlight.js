@@ -138,7 +138,7 @@ module.exports = function() {
     }(window.jQuery);
 
     $(".spotlight .wrapper").interactive_bg({
-        strength: 45,
+        strength: 10,
         scale: 1.05,
         animationSpeed: "200ms",
         contain: true,

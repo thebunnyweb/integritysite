@@ -22,7 +22,7 @@ gulp.task('fonts', function() {
 });
 
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['default'], function() {
   return gulp.src('app/**/*', { read: false })
     .pipe(deploy({
       repository: 'https://github.com/thebunnyweb/integrityfiles.git',
