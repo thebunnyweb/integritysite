@@ -1,0 +1,35 @@
+$lato: 'Lato',
+sans-serif;
+$mari: 'Merriweather',
+serif;
+$container_maxwidth: 1200px;
+$flatred: #e74c3c;
+$softgrey: #dedbdb;
+$dullwhite: #f9f9f9;
+$white: #fff;
+$carbon: #333;
+section.subscribe{
+	width:100%;
+	margin-top:50px;
+	padding: 5% 10%;
+	background:	url('../assets/subscibe.png')no-repeat;
+	background-size: 100%;
+	font-family: $lato;
+	color:#fff;
+	text-align: center;
+	.form-control:focus{
+outline:none !important;
+	}
+	input{
+		display:inline-block;
+		width:50%;
+		margin-right: 20px;
+		transition: all .5s ease;
+		&:focus,
+		&:active{
+			outline:none;
+			padding:0% 2%;
+		}
+
+	}
+}

@@ -1,0 +1,39 @@
+
+section.highlightblock
+	script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js')
+	p.info
+		| We integrate building 
+		span blocks 
+		| of web carefully to understand the value of your dreams.
+	.grid
+		.grid-item.boxone
+		.grid-item.grid-item--width2.grid-item--height2.boxtwo
+		.grid-item.grid-item--height3.boxthree
+		.grid-item.grid-item--height2.boxfour
+		.grid-item.grid-item--width3.boxfive
+		.grid-item.boxsix
+		.grid-item.boxseven
+		.grid-item.grid-item--height2.boxeight
+		.grid-item.boxnine
+	script.
+		var $grid = $('.grid').masonry({
+		itemSelector: '.grid-item'
+			});
+			$grid.on( 'click', '.grid-item', function() {
+			$( this ).toggleClass('grid-item--gigante');
+			  $grid.masonry();
+			});
+			$('.grid-item').on('mouseenter',function(){
+			$('.grid-item').removeClass('deactiveState')
+			$(this).removeClass('deactiveState')
+			$(this).removeClass('activeState')
+			$('.grid-item').addClass('deactiveState')
+			$(this).addClass('activeState')
+			$grid.masonry();
+			})
+			$('.grid-item').on('mouseleave',function(){
+			$('.grid-item').removeClass('deactiveState')			
+			$(this).removeClass('activeState')
+			$grid.masonry();
+			})

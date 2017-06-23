@@ -1,0 +1,105 @@
+$lato: 'Lato',
+sans-serif;
+$mari: 'Merriweather',
+serif;
+$container_maxwidth: 1200px;
+$flatred: #e74c3c;
+$softgrey: #dedbdb;
+$dullwhite: #f9f9f9;
+$white: #fff;
+$carbon: #333;
+.highlightblock {
+    max-width: $container_maxwidth;
+    margin: 0 auto;
+    .info {
+        font-family: $mari;
+        font-size: 2em;
+        padding-right: 50%;
+        font-weight: bold;
+        span {
+            padding: 5px;
+            background: $flatred;
+            color: white;
+        }
+    }
+    .activeState {
+        transition:all .2s ease;
+        box-shadow: 12px 9px 31px rgba(0, 0, 0, .5);
+        
+        -webkit-filter: blur(0px) !important;
+    }
+    .deactiveState{
+        -webkit-filter: blur(2px);
+    }
+    .grid {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        // max-width: 1100px;
+    }
+    .grid-item {
+        width: 10%;
+        height: 120px;
+        float: left;
+        background: #D26;
+        margin: 2px;
+    }
+    .boxone {
+        background: url('../assets/masonry.jpg')no-repeat;
+        background-position: 2% 2%;
+    }
+    .boxtwo {
+        background: url('../assets/masonry.jpg')no-repeat;
+        background-position: 26% 2%;
+    }
+    .boxthree {
+        background: url('../assets/masonry.jpg')no-repeat;
+        background-position: 50% 2%;
+    }
+    .boxfour {
+        background: url('../assets/masonry.jpg')no-repeat;
+        background-position: 75% 2%;
+    }
+    .boxfive {
+        background: url('../assets/masonry.jpg')no-repeat;
+        background-position: 1% 26%;
+    }
+    .boxsix {
+        background: url('../assets/masonry.jpg')no-repeat;
+        background-position: 1% 51%;
+    }
+    .boxseven {
+        background: url('../assets/masonry.jpg')no-repeat;
+        background-position: 50% 100%;
+    }
+    .boxeight {
+        background: url('../assets/masonry.jpg')no-repeat;
+        background-position: 98% 26%;
+    }
+    .boxnine {
+        background: url('../assets/masonry.jpg')no-repeat;
+        background-position: 1% 75%;
+    }
+    .grid-item--width2 {
+        width: 20%;
+    }
+    .grid-item--width3 {
+        width: 30%;
+    }
+    .grid-item--width4 {
+        width: 40%;
+    }
+    .grid-item--height2 {
+        height: 200px;
+    }
+    .grid-item--height3 {
+        height: 260px;
+    }
+    .grid-item--height4 {
+        height: 360px;
+    }
+    .grid-item--gigante {
+        width: 30%;
+        height: 360px;
+    }
+}
