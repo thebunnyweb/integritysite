@@ -1,0 +1,44 @@
+$lato: 'Lato',
+sans-serif;
+$mari: 'Merriweather',
+serif;
+$container_maxwidth: 1200px;
+$flatred: #e74c3c;
+$softgrey: #dedbdb;
+$dullwhite: #f9f9f9;
+$white: #fff;
+$carbon: #333;
+
+
+section.timeline{
+	min-width: 100%;
+	margin: 0 auto;
+	.timelinebox{
+		background: #e6e6e6;
+		background-size:100% ;
+		padding: 0% 5%;
+		.timelineyear p {
+			text-align: center;
+			font-size: 5em;
+			font-family: $mari;
+			color:$flatred;
+		}
+		.timelinesubinfo p {
+			text-align: center;
+			font-size: 2em;
+			font-family: $mari;
+		}
+		.timelineinfo p {
+			text-align: center;
+			font-size: 1.5em;
+			font-family: $mari;
+			padding: 20px;
+		}
+		i{
+			padding: 10px;
+			color:#fff;
+			background: $flatred;
+			font-size:1.2em;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+$lato: 'Lato',
+sans-serif;
+$mari: 'Merriweather',
+serif;
+$container_maxwidth: 1200px;
+$flatred: #e74c3c;
+$softgrey: #dedbdb;
+$dullwhite: #f9f9f9;
+$white: #fff;
+$carbon: #333;
+
+.projects{
+	max-width:$container_maxwidth;
+	margin: 40px auto;
+	.info {
+        font-family: $mari;
+        font-size: 2em;
+        padding-right: 50%;
+        font-weight: bold;
+        span {
+            padding: 5px;
+            background: $flatred;
+            color: white;
+        }
+    }
+    hr{
+        border-top:1px solid #e3e3e3;
+    }
+    .projectbar{
+    	display:flex;
+    	flex-wrap:wrap;
+    	justify-content:space-between;
+    	>div{
+    		width:30%;
+    		margiin-right:1%;
+    		padding-right: 10%;
+    		text-align:center;
+    		margin-bottom: 20px;
+    	}
+
+		h3{
+			font-family: $mari;
+		}
+    	i{
+    		font-size:4em;
+    		color:$flatred;
+    	}
+
+    	p{
+    		margin:10px 0px;
+    		text-align:justify;
+    		font-family: $lato;
+    		font-size:14px;
+    	}
+    }
+}

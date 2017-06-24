@@ -1,39 +1,56 @@
 
 section.highlightblock
-	script(src='https://code.jquery.com/jquery-2.2.4.min.js')
-	script(src='https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js')
 	p.info
 		| We integrate building 
 		span blocks 
 		| of web carefully to understand the value of your dreams.
-	.grid
-		.grid-item.boxone
-		.grid-item.grid-item--width2.grid-item--height2.boxtwo
-		.grid-item.grid-item--height3.boxthree
-		.grid-item.grid-item--height2.boxfour
-		.grid-item.grid-item--width3.boxfive
-		.grid-item.boxsix
-		.grid-item.boxseven
-		.grid-item.grid-item--height2.boxeight
-		.grid-item.boxnine
-	script.
-		var $grid = $('.grid').masonry({
-		itemSelector: '.grid-item'
-			});
-			$grid.on( 'click', '.grid-item', function() {
-			$( this ).toggleClass('grid-item--gigante');
-			  $grid.masonry();
-			});
-			$('.grid-item').on('mouseenter',function(){
-			$('.grid-item').removeClass('deactiveState')
-			$(this).removeClass('deactiveState')
-			$(this).removeClass('activeState')
-			$('.grid-item').addClass('deactiveState')
-			$(this).addClass('activeState')
-			$grid.masonry();
-			})
-			$('.grid-item').on('mouseleave',function(){
-			$('.grid-item').removeClass('deactiveState')			
-			$(this).removeClass('activeState')
-			$grid.masonry();
-			})
+	hr
+	.showcase
+		.showcase_names
+			ul.list
+				li(data-index="1")
+					p Web Designing
+				li(data-index="2")
+					p Web Development
+				li(data-index="3")
+					p Mobile Application Development
+				li(data-index="4")
+					p Search Engine Optimisation
+				li(data-index="5")
+					p Data Security
+		.showcase_images#showcase
+			.intro(data-index="0")
+				h2 We love doing 
+					span awesome  
+					|&nbsp;things for you, we love giving you the best performance with creativity at the peak. 
+					i(class="fa fa-heart")
+			.datablock1(data-index="1")
+				h2 Web Development&nbsp;
+					i(class="fa fa-sort-alpha-asc")
+				p Our team is a master shiro of doing the web designing for you.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, laudantium dolores minus? Blanditiis architecto, sit autem voluptatum alias, inventore vel.	
+				a(href="#") List of things we designed.			
+			.datablock1(data-index="2")
+				h2 Mobile Application Development&nbsp;
+					i(class="fa fa-sort-alpha-asc")
+				p Our team is a master shiro of doing the web designing for you.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, laudantium dolores minus? Blanditiis architecto, sit autem voluptatum alias, inventore vel.	
+				a(href="#") List of things we designed.			
+			.datablock1(data-index="3")
+				h2 Search Engine Optimisation&nbsp;
+					i(class="fa fa-sort-alpha-asc")
+				p Our team is a master shiro of doing the web designing for you.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, laudantium dolores minus? Blanditiis architecto, sit autem voluptatum alias, inventore vel.	
+				a(href="#") List of things we designed.			
+			.datablock1(data-index="4")
+				h2 Data Security&nbsp;
+					i(class="fa fa-sort-alpha-asc")
+				p Our team is a master shiro of doing the web designing for you.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, laudantium dolores minus? Blanditiis architecto, sit autem voluptatum alias, inventore vel.	
+				a(href="#") List of things we designed.			
+			.datablock1(data-index="5")
+				h2 Web Designing&nbsp;
+					i(class="fa fa-sort-alpha-asc")
+				p Our team is a master shiro of doing the web designing for you.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, laudantium dolores minus? Blanditiis architecto, sit autem voluptatum alias, inventore vel.	
+				a(href="#") List of things we designed.			

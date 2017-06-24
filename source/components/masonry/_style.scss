@@ -10,7 +10,7 @@ $white: #fff;
 $carbon: #333;
 .highlightblock {
     max-width: $container_maxwidth;
-    margin: 0 auto;
+    margin: 20px auto;
     .info {
         font-family: $mari;
         font-size: 2em;
@@ -22,84 +22,96 @@ $carbon: #333;
             color: white;
         }
     }
+    hr{
+        border-top:1px solid #e3e3e3;
+    }
     .activeState {
-        transition:all .2s ease;
+        transition: all .2s ease;
         box-shadow: 12px 9px 31px rgba(0, 0, 0, .5);
-        
         -webkit-filter: blur(0px) !important;
     }
-    .deactiveState{
+    .deactiveState {
         -webkit-filter: blur(2px);
     }
-    .grid {
-        margin-top: 50px;
-        margin-left: auto;
-        margin-right: auto;
-        // max-width: 1100px;
+    .active_hover {
+        transition: all .4s ease;
+        transform: translateX(20px);
+         &:after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    left: 0;
+                    display: block;
+                    background: $flatred;
+                    transition: all .4s ease;
+                }
+
     }
-    .grid-item {
-        width: 10%;
-        height: 120px;
-        float: left;
-        background: #D26;
-        margin: 2px;
+    .highlighter {
+        padding: 5px;
+        background: $flatred;
+        color: white;
     }
-    .boxone {
-        background: url('../assets/masonry.jpg')no-repeat;
-        background-position: 2% 2%;
-    }
-    .boxtwo {
-        background: url('../assets/masonry.jpg')no-repeat;
-        background-position: 26% 2%;
-    }
-    .boxthree {
-        background: url('../assets/masonry.jpg')no-repeat;
-        background-position: 50% 2%;
-    }
-    .boxfour {
-        background: url('../assets/masonry.jpg')no-repeat;
-        background-position: 75% 2%;
-    }
-    .boxfive {
-        background: url('../assets/masonry.jpg')no-repeat;
-        background-position: 1% 26%;
-    }
-    .boxsix {
-        background: url('../assets/masonry.jpg')no-repeat;
-        background-position: 1% 51%;
-    }
-    .boxseven {
-        background: url('../assets/masonry.jpg')no-repeat;
-        background-position: 50% 100%;
-    }
-    .boxeight {
-        background: url('../assets/masonry.jpg')no-repeat;
-        background-position: 98% 26%;
-    }
-    .boxnine {
-        background: url('../assets/masonry.jpg')no-repeat;
-        background-position: 1% 75%;
-    }
-    .grid-item--width2 {
-        width: 20%;
-    }
-    .grid-item--width3 {
-        width: 30%;
-    }
-    .grid-item--width4 {
-        width: 40%;
-    }
-    .grid-item--height2 {
-        height: 200px;
-    }
-    .grid-item--height3 {
-        height: 260px;
-    }
-    .grid-item--height4 {
-        height: 360px;
-    }
-    .grid-item--gigante {
-        width: 30%;
-        height: 360px;
+    .showcase {
+        display: flex;
+        margin-top: 30px;
+        flex: 1;
+        align-items: center;
+        .showcase_names {
+            width: 30%;
+            border-right: 2px solid #d8d8d8;
+            padding-right: 30px;
+            ul {
+                padding: 0;
+                list-style-type: none;
+                li {}
+            }
+            p {
+                font-family: $mari;
+                font-size: 18px;
+                cursor: pointer;
+                transition: all .4s ease;
+                position: relative;
+                display: inline-block;
+                margin: 10px 0px;
+            }
+        }
+        .showcase_images {
+            width: 70%;
+            padding: 0px 20px;
+            font-family: $mari;
+            .intro h2 {
+                text-align: center;
+                line-height: 45px;
+                span {
+                    padding: 5px;
+                    background: $flatred;
+                    color: white;
+                }
+            }
+            >div h2 {
+                text-align: left;
+                font-size: 2.5em;
+            }
+            .next,.prev{
+                padding: 7px ;
+        background: $flatred;
+        color:#fff;
+            }
+            >div {
+                p {
+                    font-size: 18px;
+                }
+                a {
+                    display: inline-block;
+                    transition: all .4s ease-in-out;
+                    &:hover {
+                        transform: translateX(10px);
+                        color: $flatred;
+                    }
+                }
+            }
+        }
     }
 }
